@@ -19,6 +19,13 @@ form.addEventListener("submit", function(event) {
         li.classList.toggle("completed");
     });
 
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Eliminar";
+
+    deleteButton.addEventListener("click", function() {
+    li.remove();
+    });
+
     list.appendChild(li);
 
     input.value = "";
